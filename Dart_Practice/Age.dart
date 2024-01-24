@@ -2,10 +2,10 @@ void main() {
   List<int> ages = [33, 15, 27, 40, 22];
   ages.sort();
   print('''
-  Lista de Edades: ${ages}
-  Edad Mayor: ${higher(ages)}
-  Edad Menor: ${less(ages)}
-  Edad Promedio: ${average(ages)}
+  Age lists: ${ages}
+  Older Ages: ${higher(ages)}
+  Younfer Ages: ${less(ages)}
+  Avereg Ages: ${average(ages)}
   ''');
 }
 
