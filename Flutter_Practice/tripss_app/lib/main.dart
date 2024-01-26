@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           ),
           actions: const [],
         ),
-        body: const DescriptionPlace(),
+        body: DescriptionPlace("Texas", 4, "good"),
       ),
     );
   }
