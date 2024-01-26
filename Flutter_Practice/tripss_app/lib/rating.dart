@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class Rating extends StatelessWidget {
   const Rating({
-    Key? key,
+    super.key,
     required this.stars,
     required this.marginLeft,
     required this.fontSize,
     required this.marginRight,
     required this.marginTop,
-  }) : super(key: key);
+  });
   final double stars;
   final double marginLeft;
   final double marginRight;

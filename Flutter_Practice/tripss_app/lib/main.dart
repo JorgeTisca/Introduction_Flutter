@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tripss_app/description_place.dart';
+import 'package:tripss_app/review.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,9 +26,10 @@ class MyApp extends StatelessWidget {
             actions: const [],
           ),
           body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: DescriptionPlace("Texas", 4, "good"),
-          )),
+              scrollDirection: Axis.vertical,
+              child: Column(
+                children: [DescriptionPlace("Texas", 4, "good"), Review()],
+              ))),
     );
   }
 }
