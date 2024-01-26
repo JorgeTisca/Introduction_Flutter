@@ -14,22 +14,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tripss App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(118, 11, 165, 62)),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(primaryColor: Colors.blue),
       home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.purple,
-          title: const Text(
-            "Hello World",
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Colors.purple,
+            title: const Text(
+              "Hello World",
+            ),
+            actions: const [],
           ),
-          actions: const [],
-        ),
-        body: DescriptionPlace("Texas", 4, "good"),
-      ),
+          body: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: DescriptionPlace("Texas", 4, "good"),
+          )),
     );
   }
 }
