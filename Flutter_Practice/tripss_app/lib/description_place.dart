@@ -3,13 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget {
-  String namePlace = '';
-  int stars = 0;
+  String namePlace;
+  int stars;
   String descriptionDumy =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." *
+          2;
 
-  DescriptionPlace(this.namePlace, this.stars, this.descriptionDumy,
-      {super.key});
+  DescriptionPlace(this.namePlace, this.stars, {super.key, required});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,11 @@ class DescriptionPlace extends StatelessWidget {
           child: Text(
             namePlace,
             style: GoogleFonts.lato(
-              textStyle: const TextStyle(color: Colors.blue, letterSpacing: .5),
+              textStyle: const TextStyle(
+                  color: Colors.blue,
+                  letterSpacing: .5,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
             ),
           ),
         ),

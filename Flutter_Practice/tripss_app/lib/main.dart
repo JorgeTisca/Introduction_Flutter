@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tripss_app/description_place.dart';
-import 'package:tripss_app/review.dart';
+import 'package:tripss_app/gradient_back.dart';
+import 'package:tripss_app/review_list.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
   runApp(const MyApp());
 }
 
@@ -17,19 +22,23 @@ class MyApp extends StatelessWidget {
       title: 'Tripss App',
       theme: ThemeData(primaryColor: Colors.blue),
       home: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            backgroundColor: Colors.purple,
-            title: const Text(
-              "Hello World",
+          body: Stack(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                DescriptionPlace(
+                  "Texas",
+                  4,
+                ),
+                const ReviewList()
+              ],
             ),
-            actions: const [],
           ),
-          body: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [DescriptionPlace("Texas", 4, "good"), Review()],
-              ))),
+          GradientBack("Popular")
+        ],
+      )),
     );
   }
 }

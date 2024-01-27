@@ -4,16 +4,8 @@ class Rating extends StatelessWidget {
   const Rating({
     super.key,
     required this.stars,
-    required this.marginLeft,
-    required this.fontSize,
-    required this.marginRight,
-    required this.marginTop,
   });
   final double stars;
-  final double marginLeft;
-  final double marginRight;
-  final double fontSize;
-  final double marginTop;
 
   Widget getStar(double stars) {
     var icon = Icons.star;
@@ -25,7 +17,7 @@ class Rating extends StatelessWidget {
       child: Icon(
         icon,
         color: const Color(0xFFff9100),
-        size: fontSize,
+        size: 16,
       ),
     );
   }
@@ -33,8 +25,7 @@ class Rating extends StatelessWidget {
   Widget getRating(double stars) {
     final list = List<Widget>.generate(5, (index) => getStar(stars - index));
     return Container(
-      margin:
-          EdgeInsets.only(left: marginLeft, right: marginRight, top: marginTop),
+      margin: const EdgeInsets.only(left: 5, right: 5),
       child: Row(
         children: list,
       ),

@@ -4,13 +4,13 @@ import 'package:tripss_app/rating.dart';
 
 // ignore: must_be_immutable
 class Review extends StatelessWidget {
-  String pathImage = "assets/image/sasuke.jpg";
-  String name = "Roberto";
-  String details = '1 review 5 photos';
-  String comment = 'There is an amazing place in Sri Lanka';
-
-  Review({super.key});
-
+  String pathImage;
+  String name;
+  String details;
+  String comment;
+  double rating;
+  Review(this.pathImage, this.name, this.details, this.comment, this.rating,
+      {super.key});
   @override
   Widget build(BuildContext context) {
     final userInfo = Container(
@@ -27,12 +27,9 @@ class Review extends StatelessWidget {
                   fontSize: 13, color: const Color(0xFFa3a5a7)),
             )),
           ),
-          const Rating(
-              stars: 3.5,
-              marginLeft: 5,
-              fontSize: 16,
-              marginRight: 5,
-              marginTop: 0)
+          Rating(
+            stars: rating,
+          )
         ],
       ),
     );
