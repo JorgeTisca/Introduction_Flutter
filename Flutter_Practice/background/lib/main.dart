@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
         height: 100,
         color: const Color.fromRGBO(0, 0, 0, 0.5),
         child: const Center(
-          child: Text('ROCKSATAR',
+          child: Text('ROCKSTAR',
               style: TextStyle(fontSize: 40, color: Colors.white)),
         ),
       ),

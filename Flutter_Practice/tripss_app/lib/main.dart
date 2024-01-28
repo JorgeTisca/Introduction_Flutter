@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tripss_app/description_place.dart';
-import 'package:tripss_app/gradient_back.dart';
+import 'package:tripss_app/header_appbar.dart';
 import 'package:tripss_app/review_list.dart';
 
 void main() {
@@ -28,6 +28,9 @@ class MyApp extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * .48,
+                ),
                 DescriptionPlace(
                   "Texas",
                   4,
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
-          GradientBack("Popular")
+          const HeaderAppBar()
         ],
       )),
     );
